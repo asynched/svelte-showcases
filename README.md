@@ -2,6 +2,8 @@
 
 Showcases made using svelte
 
+![image](./public/thumbnail.jpeg)
+
 ### TODO
 
 - [x] Initial project setup

@@ -91,12 +91,10 @@
       width: 2rem;
       height: 2rem;
 
-      background: transparent;
+      background: var(--white);
 
       border-radius: 100rem;
       border: 1px solid var(--primary);
-
-      cursor: pointer;
 
       transition: 250ms ease-in-out;
 

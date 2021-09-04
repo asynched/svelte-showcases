@@ -28,8 +28,11 @@
 <style lang="scss">
   .showcase-product {
     padding: 1rem;
+
     color: var(--text);
-    border: 1px solid #ddd;
+
+    border: 1px solid var(--border);
+    border-radius: 0.25rem;
 
     .product-image-wrapper {
       padding: 1rem;

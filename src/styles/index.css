@@ -1,0 +1,32 @@
+:root {
+  --white: #fff;
+  --text: #777;
+  --primary: #0033c6;
+  --secondary: #e82746;
+  --border: #ddd;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 72rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
