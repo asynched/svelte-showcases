@@ -1,5 +1,6 @@
 <script>
   import Showcase from './components/Showcase.svelte'
+  import ShowcaseLoading from './components/ShowcaseLoading.svelte'
   import { getProducts } from './services/api/products'
 
   const productsPromise = getProducts()
@@ -8,7 +9,7 @@
 <main class="container">
   <h1>Novos produtos</h1>
   {#await productsPromise}
-    <p>Loading...</p>
+    <ShowcaseLoading />
   {:then products}
     <Showcase {products} />
   {/await}
