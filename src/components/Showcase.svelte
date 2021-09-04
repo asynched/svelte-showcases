@@ -2,33 +2,24 @@
   import { fly } from 'svelte/transition'
   import ShowcaseProduct from './ShowcaseProduct.svelte'
 
+  export let products = []
+
   const NEXT_SHOWCASE_ANIMATION = {
     in: {
-      x: 180,
-      delay: 250,
-      duration: 250,
-    },
-    out: {
-      x: -180,
-      duration: 250,
+      x: window.innerWidth / 10,
+      duration: 500,
     },
   }
 
   const PREVIOUS_SHOWCASE_ANIMATION = {
     in: {
-      x: -180,
-      delay: 250,
-      duration: 250,
-    },
-    out: {
-      x: 180,
-      duration: 250,
+      x: -(window.innerWidth / 10),
+      duration: 500,
     },
   }
 
   let current = 0
   let animation = NEXT_SHOWCASE_ANIMATION
-  export let products = []
 
   const handleNextButtonClick = () => {
     if (current + 4 < products.length) {
@@ -62,7 +53,7 @@
     </svg>
   </button>
   {#key current}
-    <div in:fly={animation.in} out:fly={animation.out} class="showcase">
+    <div in:fly={animation.in} class="showcase">
       {#each products.slice(current, current + 4) as product (product.id)}
         <ShowcaseProduct {product} />
       {/each}
@@ -104,6 +95,8 @@
 
       border-radius: 100rem;
       border: 1px solid var(--primary);
+
+      cursor: pointer;
 
       transition: 250ms ease-in-out;
 

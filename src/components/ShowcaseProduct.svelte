@@ -61,6 +61,8 @@
     }
 
     .product-price {
+      margin-bottom: 0.25rem;
+
       font-size: 0.95rem;
       font-weight: bold;
       color: var(--primary);

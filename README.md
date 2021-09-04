@@ -8,4 +8,4 @@ Showcases made using svelte
 - [x] Create showcases grid
 - [x] Create showcases card
 - [x] Code the animations
-- [ ] Fix animations (rendering both at the same time)
+- [x] Fix animations (rendering both at the same time)
