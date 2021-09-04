@@ -1,4 +1,6 @@
 <script>
+  import { fade } from 'svelte/transition'
+
   let current = 0
   const banners = [
     {
@@ -39,11 +41,14 @@
       />
     </svg>
   </button>
-  <img
-    class="banner-image"
-    src={banners[current].image}
-    alt={banners[current].alt}
-  />
+  {#key current}
+    <img
+      in:fade
+      class="banner-image"
+      src={banners[current].image}
+      alt={banners[current].alt}
+    />
+  {/key}
   <button class="banner-button next" on:click={handleNextImageClick}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +76,7 @@
 
     .banner-button {
       position: absolute;
+      z-index: 10;
       top: 50%;
       transform: translate(0, -50%);
 
